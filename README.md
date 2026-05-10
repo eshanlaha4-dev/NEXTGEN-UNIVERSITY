@@ -1,5 +1,7 @@
 # NEXTGEN UNIVERSITY
 
+<!-- Premium university website project -->
+
 A premium futuristic university landing website built with HTML, CSS, JavaScript, Bootstrap, and Pexels-powered visuals.
 
 ## Files

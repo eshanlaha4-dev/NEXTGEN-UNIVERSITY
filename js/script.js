@@ -1,4 +1,5 @@
-﻿document.addEventListener("DOMContentLoaded", () => {
+/* NEXTGEN UNIVERSITY premium website interactions */
+document.addEventListener("DOMContentLoaded", () => {
     const navbar = document.querySelector("#mainNav");
     const searchToggle = document.querySelector("#searchToggle");
     const searchClose = document.querySelector("#searchClose");
