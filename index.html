@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NEXTGEN UNIVERSITY</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Sora:wght@500;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="ambient"></div>
+    <canvas id="hero-canvas"></canvas>
+
+    <main class="page">
+      <nav class="navbar glass">
+        <div class="brand-mark">N</div>
+        <div class="brand">
+          <strong>NEXTGEN</strong>
+          <span>UNIVERSITY</span>
+        </div>
+        <div class="nav-links">
+          <a href="#courses">Courses</a>
+          <a href="#faculty">Faculty</a>
+          <a href="#events">Events</a>
+        </div>
+        <button class="icon-btn" id="searchBtn" aria-label="Open search">⌕</button>
+      </nav>
+
+      <section class="hero">
+        <img src="assets/nextgen_campus.jpg" alt="" class="hero-image" />
+        <div class="hero-video-layer"></div>
+        <div class="hero-shade"></div>
+        <div class="hero-content">
+          <div class="pill">✦ AI-native global campus</div>
+          <h1>WELCOME TO<br />NEXTGEN UNIVERSITY</h1>
+          <p>Empowering Future Leaders Through Innovation &amp; Excellence</p>
+          <div class="hero-actions">
+            <button class="primary" id="applyHero">Apply Now <span>→</span></button>
+            <button class="secondary">▶ Watch Film</button>
+          </div>
+        </div>
+        <div class="floating-cards">
+          <article class="float-card glass"><span>🧠</span><strong>AI Powered Learning</strong><small>Adaptive labs and tutors</small></article>
+          <article class="float-card glass"><span>⟡</span><strong>Future Ready Curriculum</strong><small>Built for 2030 careers</small></article>
+          <article class="float-card glass"><span>🏅</span><strong>Global Certification</strong><small>Industry-backed credentials</small></article>
+          <article class="float-card glass"><span>🛡</span><strong>98% Placement Rate</strong><small>Elite hiring network</small></article>
+        </div>
+      </section>
+
+      <section class="section stats">
+        <div>
+          <h2>Institutional Signal</h2>
+          <p>A world-class operating system for modern higher education.</p>
+        </div>
+        <div class="stat-grid">
+          <article class="glass stat"><span>👥</span><strong>42K+</strong><small>active learners</small></article>
+          <article class="glass stat"><span>🌐</span><strong>120+</strong><small>global partners</small></article>
+          <article class="glass stat"><span>🏆</span><strong>98%</strong><small>placement rate</small></article>
+          <article class="glass stat"><span>★</span><strong>4.9</strong><small>student rating</small></article>
+        </div>
+      </section>
+
+      <section class="admission glass">
+        <div class="pill">🏅 Applications Open 2026</div>
+        <h2>Join the next elite cohort of builders, researchers and future leaders.</h2>
+        <p>Scholarships, global certification tracks and placement accelerator access are available for early applicants.</p>
+        <form id="admissionForm">
+          <div class="programs">
+            <button type="button" class="program active">AI Engineering</button>
+            <button type="button" class="program">Cyber Defense</button>
+            <button type="button" class="program">Product Design</button>
+            <button type="button" class="program">Software Systems</button>
+          </div>
+          <input id="studentName" placeholder="Student name" required />
+          <input id="studentEmail" type="email" placeholder="Email address" required />
+          <button class="primary wide" type="submit">Submit Admission Interest</button>
+          <p class="form-result" id="formResult"></p>
+        </form>
+      </section>
+
+      <section class="section" id="courses">
+        <h2>Signature Programs</h2>
+        <p>Premium tracks engineered for high-agency students.</p>
+        <div class="course-row">
+          <article class="course glass"><img src="assets/course_ai.jpg" alt="AI Engineering" /><div><span>AI · 4.9</span><h3>AI Engineering</h3><p>Build agentic systems, neural products and autonomous workflows.</p><small>Advanced · 16 weeks · Dr. Aanya Rao</small></div></article>
+          <article class="course glass"><img src="assets/course_cyber.jpg" alt="Cyber Defense" /><div><span>Security · 4.8</span><h3>Cyber Defense</h3><p>Modern security labs, cloud hardening and red-team simulations.</p><small>Pro · 14 weeks · Prof. Kabir Mehta</small></div></article>
+          <article class="course glass"><img src="assets/course_design.jpg" alt="Product Design" /><div><span>Design · 4.9</span><h3>Product Design</h3><p>Premium interface craft, interaction systems and design leadership.</p><small>Studio · 12 weeks · Mira Sen</small></div></article>
+          <article class="course glass"><img src="assets/course_software.jpg" alt="Software Systems" /><div><span>Code · 4.8</span><h3>Software Systems</h3><p>Distributed systems, Android, cloud architecture and platforms.</p><small>Core · 18 weeks · Systems Lab</small></div></article>
+        </div>
+      </section>
+
+      <section class="section" id="faculty">
+        <h2>Elite Faculty</h2>
+        <p>Researchers, founders and industry mentors in one learning loop.</p>
+        <div class="faculty-list">
+          <article class="faculty glass"><img src="assets/faculty_aanya.jpg" alt="Dr. Aanya Rao" /><div><h3>Dr. Aanya Rao</h3><p>AI research chair, ex-global robotics lab</p></div><span>★</span></article>
+          <article class="faculty glass"><img src="assets/faculty_kabir.jpg" alt="Prof. Kabir Mehta" /><div><h3>Prof. Kabir Mehta</h3><p>Systems architect and cloud infrastructure mentor</p></div><span>★</span></article>
+          <article class="faculty glass"><img src="assets/faculty_mira.jpg" alt="Mira Sen" /><div><h3>Mira Sen</h3><p>Design executive, product storytelling and UX strategy</p></div><span>★</span></article>
+        </div>
+      </section>
+
+      <section class="footer glass">
+        <h2>NEXTGEN UNIVERSITY</h2>
+        <p>Build your future inside a premium AI-native academic ecosystem.</p>
+      </section>
+    </main>
+
+    <div class="modal" id="searchModal">
+      <div class="search-box glass">
+        <button class="close" id="closeSearch">×</button>
+        <input placeholder="Search programs, faculty, labs..." />
+        <div class="suggestion">AI Engineering <span>→</span></div>
+        <div class="suggestion">Cybersecurity Lab <span>→</span></div>
+        <div class="suggestion">Placement Accelerator <span>→</span></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
