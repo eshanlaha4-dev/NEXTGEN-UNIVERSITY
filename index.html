@@ -1,122 +1,348 @@
-<!doctype html>
+﻿<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NEXTGEN UNIVERSITY - A premium futuristic university experience with modern courses, elite faculty, and immersive campus life.">
     <title>NEXTGEN UNIVERSITY</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Sora:wght@500;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div class="ambient"></div>
-    <canvas id="hero-canvas"></canvas>
 
-    <main class="page">
-      <nav class="navbar glass">
-        <div class="brand-mark">N</div>
-        <div class="brand">
-          <strong>NEXTGEN</strong>
-          <span>UNIVERSITY</span>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <nav id="mainNav" class="navbar navbar-expand-lg fixed-top navbar-dark">
+        <div class="nav-backdrop"></div>
+        <div class="container-fluid nav-container">
+            <a class="navbar-brand" href="#home">
+                <span class="brand-mark">N</span>
+                <span class="brand-text">NEXTGEN UNIVERSITY</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#courses">Courses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#admissions">Admissions</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#faculty">Faculty</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#stats">Stats</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonials">Reviews</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item nav-search-item">
+                        <button id="searchToggle" class="btn-search-icon" type="button" aria-expanded="false" aria-controls="navbarSearchDropdown" aria-label="Open search">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                        <div id="navbarSearchDropdown" class="navbar-search-dropdown" aria-hidden="true">
+                            <div class="search-input-wrap">
+                                <span class="search-icon-left"><i class="fa-solid fa-magnifying-glass"></i></span>
+                                <input id="headerSearchInput" class="search-input" type="search" placeholder="Search courses, faculty, events..." aria-label="Search courses">
+                                <button id="searchClose" class="btn-search-close" type="button" aria-label="Close search">
+                                    <i class="fa-solid fa-xmark"></i>
+                                </button>
+                                <button id="voiceSearch" class="btn-search-voice" type="button" aria-label="Voice search">
+                                    <i class="fa-solid fa-microphone"></i>
+                                </button>
+                            </div>
+                            <div class="search-results" aria-live="polite" id="searchResults"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="nav-links">
-          <a href="#courses">Courses</a>
-          <a href="#faculty">Faculty</a>
-          <a href="#events">Events</a>
-        </div>
-        <button class="icon-btn" id="searchBtn" aria-label="Open search">⌕</button>
-      </nav>
+    </nav>
+    <div id="searchBackdrop" class="search-backdrop" aria-hidden="true"></div>
 
-      <section class="hero">
-        <img src="assets/nextgen_campus.jpg" alt="" class="hero-image" />
-        <div class="hero-video-layer"></div>
-        <div class="hero-shade"></div>
+    <header id="home" class="hero-hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-particles"></div>
+        <div class="hero-lights"></div>
         <div class="hero-content">
-          <div class="pill">✦ AI-native global campus</div>
-          <h1>WELCOME TO<br />NEXTGEN UNIVERSITY</h1>
-          <p>Empowering Future Leaders Through Innovation &amp; Excellence</p>
-          <div class="hero-actions">
-            <button class="primary" id="applyHero">Apply Now <span>→</span></button>
-            <button class="secondary">▶ Watch Film</button>
-          </div>
+            <div class="container">
+                <div class="row align-items-center vh-100">
+                    <div class="col-lg-7">
+                        <p class="eyebrow" data-aos="fade-up">FUTURISTIC UNIVERSITY EXPERIENCE</p>
+                        <h1 data-aos="fade-up" data-aos-delay="100">Welcome to <span>NEXTGEN UNIVERSITY</span></h1>
+                        <p class="hero-copy" data-aos="fade-up" data-aos-delay="200">Empowering Future Leaders Through Innovation & Excellence</p>
+                        <div class="hero-actions" data-aos="fade-up" data-aos-delay="300">
+                            <a class="btn btn-primary btn-lg" href="#courses">
+                                <span>Explore Courses</span>
+                                <span class="btn-ripple"></span>
+                            </a>
+                            <button class="btn btn-secondary btn-lg" type="button" data-bs-toggle="modal" data-bs-target="#campusVideoModal">
+                                <i class="fa-solid fa-play"></i> Watch Video
+                                <span class="btn-ripple"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-cards">
+                <article class="hero-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-glow"></div>
+                    <span>AI Powered Learning</span>
+                    <p>Adaptive modules, intelligent mentors, and personalized tracking.</p>
+                </article>
+                <article class="hero-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-glow"></div>
+                    <span>Global Certification</span>
+                    <p>Industry-recognized credentials from future-ready programs.</p>
+                </article>
+                <article class="hero-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-glow"></div>
+                    <span>Expert Faculty</span>
+                    <p>World-class mentors combining research, industry, and teaching.</p>
+                </article>
+                <article class="hero-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card-glow"></div>
+                    <span>98% Placement Rate</span>
+                    <p>Proven career pipelines with premium employer partners.</p>
+                </article>
+            </div>
         </div>
-        <div class="floating-cards">
-          <article class="float-card glass"><span>🧠</span><strong>AI Powered Learning</strong><small>Adaptive labs and tutors</small></article>
-          <article class="float-card glass"><span>⟡</span><strong>Future Ready Curriculum</strong><small>Built for 2030 careers</small></article>
-          <article class="float-card glass"><span>🏅</span><strong>Global Certification</strong><small>Industry-backed credentials</small></article>
-          <article class="float-card glass"><span>🛡</span><strong>98% Placement Rate</strong><small>Elite hiring network</small></article>
+    </header>
+
+    <section id="about" class="section section-glass">
+        <div class="container">
+            <div class="row align-items-center gy-5">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="glass-panel about-panel">
+                        <span class="section-label">About NEXTGEN</span>
+                        <h2>World-class learning built for visionary leaders.</h2>
+                        <p>NextGen University blends cinematic design, elite mentorship, and practical career pathways into a premium academic experience.</p>
+                        <div class="about-list">
+                            <div><i class="fa-solid fa-check"></i> Modern labs & research studios</div>
+                            <div><i class="fa-solid fa-check"></i> Career-first learning pathways</div>
+                            <div><i class="fa-solid fa-check"></i> Global student community</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="feature-preview">
+                        <div class="feature-image"></div>
+                        <div class="feature-tag">Premium innovation campus</div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </section>
+    </section>
 
-      <section class="section stats">
-        <div>
-          <h2>Institutional Signal</h2>
-          <p>A world-class operating system for modern higher education.</p>
+    <section id="stats" class="section stats-section">
+        <div class="container">
+            <div class="section-heading text-center" data-aos="fade-up">
+                <span class="section-label">Impact Metrics</span>
+                <h2>Leading the next wave of higher education.</h2>
+            </div>
+            <div class="row gy-4 text-center mt-5">
+                <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="metric-card"><h3>15K+</h3><p>Students</p></div>
+                </div>
+                <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="metric-card"><h3>120+</h3><p>Courses</p></div>
+                </div>
+                <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="metric-card"><h3>50+</h3><p>Faculty</p></div>
+                </div>
+                <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+                    <div class="metric-card"><h3>98%</h3><p>Placement Rate</p></div>
+                </div>
+            </div>
         </div>
-        <div class="stat-grid">
-          <article class="glass stat"><span>👥</span><strong>42K+</strong><small>active learners</small></article>
-          <article class="glass stat"><span>🌐</span><strong>120+</strong><small>global partners</small></article>
-          <article class="glass stat"><span>🏆</span><strong>98%</strong><small>placement rate</small></article>
-          <article class="glass stat"><span>★</span><strong>4.9</strong><small>student rating</small></article>
+    </section>
+
+    <section id="courses" class="section courses-section">
+        <div class="container">
+            <div class="section-heading text-center" data-aos="fade-up">
+                <span class="section-label">Courses</span>
+                <h2>Futuristic programs built for high-achievers.</h2>
+            </div>
+            <div class="row gy-4 mt-4">
+                <div class="col-md-6 col-xl-4" data-aos="fade-up" data-aos-delay="100">
+                    <article class="course-card glass-panel">
+                        <div class="course-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                        <h3>B.Tech Computer Science</h3>
+                        <p>High-performance development, AI systems, and product engineering.</p>
+                    </article>
+                </div>
+                <div class="col-md-6 col-xl-4" data-aos="fade-up" data-aos-delay="200">
+                    <article class="course-card glass-panel">
+                        <div class="course-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                        <h3>MBA</h3>
+                        <p>Strategic leadership, digital business, and global management.</p>
+                    </article>
+                </div>
+                <div class="col-md-6 col-xl-4" data-aos="fade-up" data-aos-delay="300">
+                    <article class="course-card glass-panel">
+                        <div class="course-icon"><i class="fa-solid fa-brain"></i></div>
+                        <h3>Data Science</h3>
+                        <p>Machine learning, analytics, and AI-driven decision systems.</p>
+                    </article>
+                </div>
+                <div class="col-md-6 col-xl-4" data-aos="fade-up" data-aos-delay="400">
+                    <article class="course-card glass-panel">
+                        <div class="course-icon"><i class="fa-solid fa-user-ninja"></i></div>
+                        <h3>BCA</h3>
+                        <p>Software engineering, app development, and modern computing skills.</p>
+                    </article>
+                </div>
+                <div class="col-md-6 col-xl-4" data-aos="fade-up" data-aos-delay="500">
+                    <article class="course-card glass-panel">
+                        <div class="course-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+                        <h3>B.Sc Nursing</h3>
+                        <p>Clinical care, wellness sciences, and healthcare innovation.</p>
+                    </article>
+                </div>
+                <div class="col-md-6 col-xl-4" data-aos="fade-up" data-aos-delay="600">
+                    <article class="course-card glass-panel">
+                        <div class="course-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+                        <h3>B.Ed</h3>
+                        <p>Modern education design, learning research, and teaching strategies.</p>
+                    </article>
+                </div>
+            </div>
         </div>
-      </section>
+    </section>
 
-      <section class="admission glass">
-        <div class="pill">🏅 Applications Open 2026</div>
-        <h2>Join the next elite cohort of builders, researchers and future leaders.</h2>
-        <p>Scholarships, global certification tracks and placement accelerator access are available for early applicants.</p>
-        <form id="admissionForm">
-          <div class="programs">
-            <button type="button" class="program active">AI Engineering</button>
-            <button type="button" class="program">Cyber Defense</button>
-            <button type="button" class="program">Product Design</button>
-            <button type="button" class="program">Software Systems</button>
-          </div>
-          <input id="studentName" placeholder="Student name" required />
-          <input id="studentEmail" type="email" placeholder="Email address" required />
-          <button class="primary wide" type="submit">Submit Admission Interest</button>
-          <p class="form-result" id="formResult"></p>
-        </form>
-      </section>
-
-      <section class="section" id="courses">
-        <h2>Signature Programs</h2>
-        <p>Premium tracks engineered for high-agency students.</p>
-        <div class="course-row">
-          <article class="course glass"><img src="assets/course_ai.jpg" alt="AI Engineering" /><div><span>AI · 4.9</span><h3>AI Engineering</h3><p>Build agentic systems, neural products and autonomous workflows.</p><small>Advanced · 16 weeks · Dr. Aanya Rao</small></div></article>
-          <article class="course glass"><img src="assets/course_cyber.jpg" alt="Cyber Defense" /><div><span>Security · 4.8</span><h3>Cyber Defense</h3><p>Modern security labs, cloud hardening and red-team simulations.</p><small>Pro · 14 weeks · Prof. Kabir Mehta</small></div></article>
-          <article class="course glass"><img src="assets/course_design.jpg" alt="Product Design" /><div><span>Design · 4.9</span><h3>Product Design</h3><p>Premium interface craft, interaction systems and design leadership.</p><small>Studio · 12 weeks · Mira Sen</small></div></article>
-          <article class="course glass"><img src="assets/course_software.jpg" alt="Software Systems" /><div><span>Code · 4.8</span><h3>Software Systems</h3><p>Distributed systems, Android, cloud architecture and platforms.</p><small>Core · 18 weeks · Systems Lab</small></div></article>
+    <section id="faculty" class="section faculty-section">
+        <div class="container">
+            <div class="section-heading text-center" data-aos="fade-up">
+                <span class="section-label">Faculty</span>
+                <h2>Mentors who lead industry, research, and innovation.</h2>
+            </div>
+            <div class="row gy-4 mt-4">
+                <div class="col-md-6 col-xl-3" data-aos="fade-up" data-aos-delay="100">
+                    <article class="profile-card glass-panel">
+                        <img src="https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Professor" loading="lazy">
+                        <h3>Prof. James Smith</h3>
+                        <p>Computer Science</p>
+                    </article>
+                </div>
+                <div class="col-md-6 col-xl-3" data-aos="fade-up" data-aos-delay="200">
+                    <article class="profile-card glass-panel">
+                        <img src="https://images.pexels.com/photos/3796217/pexels-photo-3796217.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Faculty" loading="lazy">
+                        <h3>Dr. Sarah Johnson</h3>
+                        <p>Business Strategy</p>
+                    </article>
+                </div>
+                <div class="col-md-6 col-xl-3" data-aos="fade-up" data-aos-delay="300">
+                    <article class="profile-card glass-panel">
+                        <img src="https://images.pexels.com/photos/8197544/pexels-photo-8197544.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Faculty" loading="lazy">
+                        <h3>Prof. Michael Brown</h3>
+                        <p>AI & Robotics</p>
+                    </article>
+                </div>
+                <div class="col-md-6 col-xl-3" data-aos="fade-up" data-aos-delay="400">
+                    <article class="profile-card glass-panel">
+                        <img src="https://images.pexels.com/photos/5212340/pexels-photo-5212340.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Faculty" loading="lazy">
+                        <h3>Dr. Emily Davis</h3>
+                        <p>Healthcare Innovation</p>
+                    </article>
+                </div>
+            </div>
         </div>
-      </section>
+    </section>
 
-      <section class="section" id="faculty">
-        <h2>Elite Faculty</h2>
-        <p>Researchers, founders and industry mentors in one learning loop.</p>
-        <div class="faculty-list">
-          <article class="faculty glass"><img src="assets/faculty_aanya.jpg" alt="Dr. Aanya Rao" /><div><h3>Dr. Aanya Rao</h3><p>AI research chair, ex-global robotics lab</p></div><span>★</span></article>
-          <article class="faculty glass"><img src="assets/faculty_kabir.jpg" alt="Prof. Kabir Mehta" /><div><h3>Prof. Kabir Mehta</h3><p>Systems architect and cloud infrastructure mentor</p></div><span>★</span></article>
-          <article class="faculty glass"><img src="assets/faculty_mira.jpg" alt="Mira Sen" /><div><h3>Mira Sen</h3><p>Design executive, product storytelling and UX strategy</p></div><span>★</span></article>
+    <section id="testimonials" class="section testimonials-section">
+        <div class="container">
+            <div class="section-heading text-center" data-aos="fade-up">
+                <span class="section-label">Reviews</span>
+                <h2>Trusted by ambitious students worldwide.</h2>
+            </div>
+            <div class="row gy-4 mt-4">
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-card glass-panel">
+                        <p>"NEXTGEN UNIVERSITY transformed my career path. The immersive courses and mentorship feel like a premium tech campus."</p>
+                        <h3>Aarav Mehta</h3>
+                        <span>Computer Science</span>
+                    </div>
+                </div>
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-card glass-panel">
+                        <p>"The faculty, campus design, and industry projects were exceptional. This is university-level innovation at its best."</p>
+                        <h3>Sophia Williams</h3>
+                        <span>MBA Candidate</span>
+                    </div>
+                </div>
+            </div>
         </div>
-      </section>
+    </section>
 
-      <section class="footer glass">
-        <h2>NEXTGEN UNIVERSITY</h2>
-        <p>Build your future inside a premium AI-native academic ecosystem.</p>
-      </section>
-    </main>
+    <section id="events" class="section events-section">
+        <div class="container">
+            <div class="section-heading text-center" data-aos="fade-up">
+                <span class="section-label">Events</span>
+                <h2>Upcoming campus experiences and innovation forums.</h2>
+            </div>
+            <div class="row gy-4 mt-4">
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                    <article class="event-card glass-panel"><span>Jun 18</span><h3>Admissions Open House</h3></article>
+                </div>
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                    <article class="event-card glass-panel"><span>Jul 04</span><h3>AI Innovation Summit</h3></article>
+                </div>
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                    <article class="event-card glass-panel"><span>Jul 22</span><h3>Scholarship Deadline</h3></article>
+                </div>
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+                    <article class="event-card glass-panel"><span>Aug 09</span><h3>Global Career Week</h3></article>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div class="modal" id="searchModal">
-      <div class="search-box glass">
-        <button class="close" id="closeSearch">×</button>
-        <input placeholder="Search programs, faculty, labs..." />
-        <div class="suggestion">AI Engineering <span>→</span></div>
-        <div class="suggestion">Cybersecurity Lab <span>→</span></div>
-        <div class="suggestion">Placement Accelerator <span>→</span></div>
-      </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a class="footer-brand" href="#home"><span class="brand-mark">N</span> NEXTGEN UNIVERSITY</a>
+                    <p>Premium futuristic university design with elite courses, expert faculty, and modern campus life.</p>
+                    <div class="footer-socials">
+                        <a href="#facebook" title="Facebook" aria-label="Follow us on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#twitter" title="Twitter" aria-label="Follow us on Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#linkedin" title="LinkedIn" aria-label="Connect on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#instagram" title="Instagram" aria-label="Follow us on Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3>Explore</h3>
+                    <a href="#about">About</a>
+                    <a href="#courses">Courses</a>
+                    <a href="#admissions">Admissions</a>
+                </div>
+                <div>
+                    <h3>Contact</h3>
+                    <p>admissions@nextgenuniversity.edu</p>
+                    <p>+44 1865 270 000</p>
+                </div>
+            </div>
+            <div class="footer-bottom">&copy; 2026 NEXTGEN UNIVERSITY. Crafted for the future of learning.</div>
+        </div>
+    </footer>
+
+    <div class="modal fade video-modal" id="campusVideoModal" tabindex="-1" aria-labelledby="campusVideoTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="campusVideoTitle">Campus Video Preview</h2>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="ratio ratio-16x9">
+                        <iframe id="campusVideo" src="https://www.youtube.com/embed/8hP9D6kZseM?enablejsapi=1" title="Campus video preview" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <script src="script.js"></script>
-  </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+</body>
 </html>
