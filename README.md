@@ -1,5 +1,3 @@
-# NEXTGEN UNIVERSITY
-
 <div align="center">
 
 # 🎓 NEXTGEN UNIVERSITY
